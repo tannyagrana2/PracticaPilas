@@ -8,25 +8,14 @@ public class PracticaPilas {
 
     public static void main(String[] args) {
 
-        int cubierto;
         Pila miPila = new Pila();
-
-        //Se coloca un vaso con 3 cubiertos de primero
-        cubierto = 3;
-        Vaso v = new Vaso(cubierto);
-        miPila.push(v);
-
-        //Se coloca un plato con 2 cubiertos
-        cubierto = 2;
-        Plato p = new Plato(cubierto);
-        miPila.push(p);
-
-        //Se coloca un plato sin cubiertos
-        cubierto = 0;
-        p = new Plato(cubierto);
-        miPila.push(p);
-
-        miPila.listar();
+        Vaso v = new Vaso(0);
+        Plato p = new Plato(0);
+        
+        miPila.push(new Vaso(3)); //Vaso con 3 cubiertos
+        miPila.push(new Plato(2));//Plato con 2 cubiertos
+        miPila.push(new Plato(0));//Plato sin cubiertos
+        miPila.listar(); 
 
     }
 }
